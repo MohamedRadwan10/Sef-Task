@@ -4,7 +4,6 @@ import logo from "../../assets/images/55371b87-94dd-401c-bdd5-138890353d23.jfif"
 import { Knob } from "primereact/knob";
 import { useState } from "react";
 
-
 const GlobalStyle = styled.div`
   * {
     margin: 0;
@@ -387,7 +386,7 @@ const Course = styled.section`
 
   /* Extra small devices (small smartphones) */
   @media (max-width: 480px) {
-    padding: 50px 0;
+    padding: 70px 0;
   }
 `;
 
@@ -609,6 +608,7 @@ const ProgressItems = styled.div`
   /* Extra small devices (small smartphones) */
   @media (max-width: 480px) {
     flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
   }
 `;
@@ -632,6 +632,7 @@ const ProgressItem = styled.div`
     gap: 10px;
     padding: 10px;
     text-align: start;
+    width: 100%;
   }
 `;
 
@@ -796,10 +797,6 @@ const DateSpan = styled.span`
   color: #bf9b30;
 `;
 const StudentPortal = () => {
-  
-
-  
-
   return (
     <>
       <GlobalStyle>
@@ -817,7 +814,7 @@ const StudentPortal = () => {
                     WELCOME BACK, <Name>BALQEES SABIR</Name>
                   </WelcomeNameH1>
 
-                  <ViewButton >View Profile</ViewButton>
+                  <ViewButton>View Profile</ViewButton>
                 </WelcomeName>
                 <LevelProgress>
                   <Progress>
