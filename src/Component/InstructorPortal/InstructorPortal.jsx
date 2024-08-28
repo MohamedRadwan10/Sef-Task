@@ -142,7 +142,7 @@ export default function InstructorPortal() {
     background-color: #bf9b30;
     border: 0;
     border-radius: 5px;
-      cursor: pointer;d
+    cursor: pointer;
     &:hover {
       background-color: #eab20c;
     }
@@ -518,7 +518,7 @@ export default function InstructorPortal() {
     margin-top: 5px;
     border-radius: 0 0 5px 5px;
   `;
-  const CourseExamInfo = styled.p`
+  const CourseExamInfo = styled.div`
     width: 50%;
     /* Large devices (laptops/desktops) */
     @media (max-width: 1200px) {
@@ -736,8 +736,12 @@ export default function InstructorPortal() {
     border-radius: 5px;
     align-self: flex-end;
     margin-bottom: 10px;
-  `;
 
+    cursor: pointer;
+    &:hover {
+      background-color: #eab20c;
+    }
+  `;
   const CourseImage = styled.div`
     width: 30%;
     border-radius: 8px;
@@ -790,7 +794,7 @@ export default function InstructorPortal() {
       left: 5%;
     }
   `;
-
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   return (
     <>
       <GlobalStyle>
@@ -798,7 +802,7 @@ export default function InstructorPortal() {
           <Overlay>
             <Container>
               <DateMain>
-                <DateMainP>Student Portal</DateMainP>
+                <DateMainP>Instructor Portal</DateMainP>
                 <Line></Line>
                 <DateMainDay>6th June 2024</DateMainDay>
               </DateMain>
@@ -807,8 +811,7 @@ export default function InstructorPortal() {
                   <WelcomeNameH1>
                     WELCOME BACK, <Name>BALQEES SABIR</Name>
                   </WelcomeNameH1>
-                  <Link to="profile">
-                    {" "}
+                  <Link to="/profile">
                     <ViewButton>View Profile</ViewButton>
                   </Link>
                 </WelcomeName>
@@ -945,7 +948,6 @@ export default function InstructorPortal() {
                         </CourseLessons>
                       </CourseDetails>
                     </CardInfo>
-
                     <CourseButton>VIEW DETAILS</CourseButton>
                   </CardInfoAll>
                 </CourseCard>

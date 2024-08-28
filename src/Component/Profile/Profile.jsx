@@ -241,34 +241,34 @@ const Profile = () => {
   `;
 
   const DateMain = styled.div`
-  width: 20%;
-  margin: 20px 0;
+    width: 20%;
+    margin: 20px 0;
 
-  /* Large devices (laptops/desktops) */
-  @media (max-width: 1200px) {
-  }
-  width: 25%;
-  /* Medium devices (tablets) */
-  @media (max-width: 992px) {
-  }
-  width: 30%;
-  /* Small devices (smartphones) */
-  @media (max-width: 768px) {
-  }
-  width: 40%;
-  /* Extra small devices (small smartphones) */
-  @media (max-width: 480px) {
+    /* Large devices (laptops/desktops) */
+    @media (max-width: 1200px) {
+    }
+    width: 25%;
+    /* Medium devices (tablets) */
+    @media (max-width: 992px) {
+    }
+    width: 30%;
+    /* Small devices (smartphones) */
+    @media (max-width: 768px) {
+    }
     width: 40%;
-  }
-`;
+    /* Extra small devices (small smartphones) */
+    @media (max-width: 480px) {
+      width: 40%;
+    }
+  `;
 
-const DateMainP = styled.p`
-  color: #d0d0d0;
-`;
+  const DateMainP = styled.p`
+    color: #d0d0d0;
+  `;
 
-const DateMainDay = styled.p`
-  color: #d0d0d0;
-`;
+  const DateMainDay = styled.p`
+    color: #d0d0d0;
+  `;
   const Line = styled.p`
     width: 80px;
     height: 1px;
@@ -656,6 +656,7 @@ const DateMainDay = styled.p`
       font-size: 14px;
     }
   `;
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   return (
     <>
       <GlobalStyle>
@@ -665,7 +666,7 @@ const DateMainDay = styled.p`
             <Overlay>
               <Container>
                 <DateMain>
-                  <DateMainP>Student Portal</DateMainP>
+                  <DateMainP>Profile</DateMainP>
                   <Line></Line>
                   <DateMainDay>6th June 2024</DateMainDay>
                 </DateMain>

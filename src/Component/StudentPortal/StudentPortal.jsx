@@ -3,6 +3,7 @@ import styled from "styled-components";
 import logo from "../../assets/images/55371b87-94dd-401c-bdd5-138890353d23.jfif";
 import { Knob } from "primereact/knob";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const GlobalStyle = styled.div`
   * {
@@ -70,16 +71,19 @@ const DateMain = styled.div`
 
   /* Large devices (laptops/desktops) */
   @media (max-width: 1200px) {
+    width: 25%;
   }
-  width: 25%;
+
   /* Medium devices (tablets) */
   @media (max-width: 992px) {
+    width: 30%;
   }
-  width: 30%;
+
   /* Small devices (smartphones) */
   @media (max-width: 768px) {
+    width: 40%;
   }
-  width: 40%;
+
   /* Extra small devices (small smartphones) */
   @media (max-width: 480px) {
     width: 40%;
@@ -797,6 +801,7 @@ const DateSpan = styled.span`
   color: #bf9b30;
 `;
 const StudentPortal = () => {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   return (
     <>
       <GlobalStyle>
@@ -814,7 +819,9 @@ const StudentPortal = () => {
                     WELCOME BACK, <Name>BALQEES SABIR</Name>
                   </WelcomeNameH1>
 
-                  <ViewButton>View Profile</ViewButton>
+                  <Link to="/profile">
+                    <ViewButton>View Profile</ViewButton>
+                  </Link>
                 </WelcomeName>
                 <LevelProgress>
                   <Progress>
@@ -989,7 +996,9 @@ const StudentPortal = () => {
                   </Date>
                 </CertificateItemInfoText>
               </CertificateItemInfo>
-              <ViewButton>Download</ViewButton>
+              <Link to="/instructorportal">
+                <ViewButton>Download</ViewButton>
+              </Link>
             </CertificateItem>
           </Container>
         </CertificatesSection>
